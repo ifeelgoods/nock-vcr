@@ -8,22 +8,23 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/carbonfive/nock-vcr.git"
+    "url": "git://github.com/ifeelgoods/nock-vcr.git"
   },
   "keywords": [
     "mock",
     "http",
     "vcr"
   ],
-  "author": "Rudy Jahchan <rudy@carbonfive.com>",
+  "author": "Ifelgoods <tech@ifeelgoods.com>",
   "license": "BSD",
   "readmeFilename": "README.md",
-  "dependencies" : {
-    "nock" : "git://github.com/rudyjahchan/nock.git"
+  "dependencies": {
+    "nock": "git://github.com/ifeelgoods/nock.git"
   },
-  "devDependencies" : {
+  "devDependencies": {
     "coffee-script": "1.4.x",
     "mocha": "1.x",
-    "chai": "1.4.x"
+    "chai": "1.4.x",
+    "nock": "git://github.com/ifeelgoods/nock.git"
   }
 }
