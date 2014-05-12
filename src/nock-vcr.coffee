@@ -80,6 +80,8 @@ class Cassette
     fs.writeFileSync @file, calls, 'utf8'
 
 insertCassette = (name, options={})->
+  nock.recorder.setGeneratedBodyRequestFilters(options.generatedBodyRequestFilters ? [])
+
   nock.cleanAll()
   if _currentCassette?
     throw new Error("Cassette '#{_currentCassette.name}' already loaded!")
