@@ -1,6 +1,6 @@
 {
   "name": "nock-vcr",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Automate the recording and play-back of HTTP requests with the nock framework.",
   "main": "lib/nock-vcr.js",
   "scripts": {
@@ -19,12 +19,12 @@
   "license": "BSD",
   "readmeFilename": "README.md",
   "dependencies": {
-    "nock": "git://github.com/ifeelgoods/nock.git#0.14.3+ifg.3"
+    "nock": "git+https://github.com/ifeelgoods/nock.git#v0.31.3+ifg.1"
   },
   "devDependencies": {
     "coffee-script": "1.4.x",
     "mocha": "1.x",
     "chai": "1.4.x",
-    "nock": "git+https://github.com/ifeelgoods/nock.git#0.14.3+ifg.3"
+    "nock": "git+https://github.com/ifeelgoods/nock.git#v0.31.3+ifg.1"
   }
 }
