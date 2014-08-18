@@ -81,6 +81,7 @@ class Cassette
 
 insertCassette = (name, options={})->
   nock.recorder.setGeneratedBodyRequestFilters(options.generatedBodyRequestFilters ? [])
+  nock.recorder.setGeneratedPathFilters(options.generatedPathFilters ? [])
 
   nock.cleanAll()
   if _currentCassette?
