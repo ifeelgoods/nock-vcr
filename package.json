@@ -19,12 +19,12 @@
   "license": "BSD",
   "readmeFilename": "README.md",
   "dependencies": {
-    "nock": "git://github.com/ifeelgoods/nock.git#0.14.3+ifg.3"
+    "nock": "git://github.com/ifeelgoods/nock.git#v0.14.3+ifg.4"
   },
   "devDependencies": {
     "coffee-script": "1.4.x",
     "mocha": "1.x",
     "chai": "1.4.x",
-    "nock": "git+https://github.com/ifeelgoods/nock.git#0.14.3+ifg.3"
+    "nock": "git+https://github.com/ifeelgoods/nock.git#v0.14.3+ifg.4"
   }
 }
