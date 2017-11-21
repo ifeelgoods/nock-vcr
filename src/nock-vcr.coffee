@@ -94,7 +94,7 @@ ejectCassette = ->
   try
     _currentCassette?.eject()
   catch error
-    throw error
+    throw error unless 'Mocks not yet satisfied' in error.message
   finally
     _currentCassette = null
     nock.cleanAll()
