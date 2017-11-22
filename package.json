@@ -4,7 +4,8 @@
   "description": "Automate the recording and play-back of HTTP requests with the nock framework.",
   "main": "lib/nock-vcr.js",
   "scripts": {
-    "test": "cake test"
+    "test": "node_modules/.bin/cake test",
+    "build": "node_modules/.bin/cake build"
   },
   "repository": {
     "type": "git",
