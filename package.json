@@ -5,7 +5,8 @@
   "main": "lib/nock-vcr.js",
   "scripts": {
     "test": "node_modules/.bin/cake test",
-    "build": "node_modules/.bin/cake build"
+    "build": "node_modules/.bin/cake build",
+    "release": "npm run build && git add lib && node_modules/.bin/angular-release"
   },
   "repository": {
     "type": "git",
@@ -23,9 +24,10 @@
     "nock": "git://github.com/ifeelgoods/nock.git#v0.14.3+ifg.4"
   },
   "devDependencies": {
+    "angular-release": "^1.1.6",
+    "chai": "1.4.x",
     "coffee-script": "1.4.x",
     "mocha": "1.x",
-    "chai": "1.4.x",
     "nock": "git+https://github.com/ifeelgoods/nock.git#v0.14.3+ifg.4"
   }
 }
