@@ -24,13 +24,14 @@ flushNockRecorder = ->
       code += "\nrefs[#{i}] = #{call.substr(1)}"
     code += "\n\nreturn refs;"
     code += "\n};"
-    code
+    return code
 
 ensureCassetteLibraryDirExists = ->
   currentDir = '.'
   for dir in config.cassetteLibraryDir.split(path.sep)
     currentDir = path.resolve currentDir, dir
     fs.mkdirSync(currentDir) unless fs.existsSync(currentDir)
+  return
 
 class Cassette
 
@@ -55,7 +56,7 @@ class Cassette
       switch recordMode
         when ALL then true
         when NONE then false
-        else !@exists
+        else not @exists
 
   load: ->
     nock.cleanAll()
@@ -77,13 +78,13 @@ class Cassette
     if @recording
       @write()
     else if @refs?
-      for ref, index in @refs
-        try ref.done()
+      @refs.forEach (ref, index) ->
+        try
+          ref.done()
         catch error
-          if 'Mocks not yet satisfied' in error.message
+          if error.message.includes('Mocks not yet satisfied')
             console.warn "refs[#{ index }]", error.message
           else throw error
-    return
 
   write: ->
     calls = flushNockRecorder()
