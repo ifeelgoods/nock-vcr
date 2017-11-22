@@ -39,11 +39,17 @@ class Cassette
       throw new Error("A name is needed for the cassette.")
 
     Object.defineProperty @, 'name', value: name
+
     Object.defineProperty @, 'file', get: =>
-      fileName = "#{@name.split(/\W+/).join('-').toLowerCase()}.js"
-      path.resolve(path.join config.cassetteLibraryDir, fileName)
+      fileName = "#{ @name.split(/[^\w\/]+/).join('-').toLowerCase() }.js"
+      filePath = path.join(config.cassetteLibraryDir, fileName)
+      dir = filePath.substring(0, filePath.lastIndexOf('/') + 1)
+      fs.mkdirSync dir unless fs.existsSync(dir)
+      path.resolve filePath
+
     Object.defineProperty @, 'exists', get: =>
       fs.existsSync @file
+
     Object.defineProperty @, 'recording', get: =>
       recordMode = options.record ? config.mode ? ONCE
       switch recordMode
