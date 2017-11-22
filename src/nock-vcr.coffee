@@ -71,8 +71,13 @@ class Cassette
     if @recording
       @write()
     else if @refs?
-      for ref in @refs
-        ref.done()
+      for ref, index in @refs
+        try ref.done()
+        catch error
+          if 'Mocks not yet satisfied' in error.message
+            console.warn "refs[#{ index }]", error.message
+          else throw error
+    return
 
   write: ->
     calls = flushNockRecorder()
