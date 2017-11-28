@@ -24,10 +24,10 @@
     "nock": "git://github.com/ifeelgoods/nock.git#v0.14.3+ifg.4"
   },
   "devDependencies": {
-    "angular-release": "^1.1.7",
-    "chai": "1.4.x",
-    "coffee-script": "1.4.x",
-    "mocha": "1.x",
-    "nock": "git+https://github.com/ifeelgoods/nock.git#v0.14.3+ifg.4"
+    "angular-release": "1.1.7",
+    "chai": "1.4.2",
+    "coffee-script": "1.4.0",
+    "diff-so-fancy": "1.1.1",
+    "mocha": "1.21.5"
   }
 }
