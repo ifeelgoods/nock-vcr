@@ -1,6 +1,6 @@
 {
   "name": "nock-vcr",
-  "version": "1.0.0-ifg.3",
+  "version": "1.0.0-ifg.4",
   "description": "Automate the recording and play-back of HTTP requests with the nock framework.",
   "main": "lib/nock-vcr.js",
   "scripts": {
