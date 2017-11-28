@@ -82,8 +82,7 @@ class Cassette
         try
           ref.done()
         catch error
-          r = /(No match for HTTP request)|(Mocks not yet satisfied)/g
-          if r.test error.message
+          if error.message.includes('Mocks not yet satisfied')
             console.warn "refs[#{ index }]", error.message
           else throw error
 
