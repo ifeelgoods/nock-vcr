@@ -24,7 +24,7 @@
     "nock": "git://github.com/ifeelgoods/nock.git#v0.14.3+ifg.4"
   },
   "devDependencies": {
-    "angular-release": "1.1.7",
+    "angular-release": "1.2.0",
     "chai": "1.4.2",
     "coffee-script": "1.4.0",
     "diff-so-fancy": "1.1.1",
